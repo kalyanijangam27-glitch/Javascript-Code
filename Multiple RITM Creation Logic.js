@@ -2,7 +2,7 @@
 
   var candidateName;
 
-  var grName = new GlideRecord('sn_hr_core_on_boarding_core'); // take candidate name display value
+  var grName = new GlideRecord('sn_hr_core_boarding_core'); // take candidate name display value
   grName.addQuery('sys_id', inputs.script_candidatename);
   grName.query();
   if (grName.next()) {
@@ -23,7 +23,7 @@
     grRitm.initialize();
     grRitm.cat_item = catalogItem;
     grRitm.request = inputs.script_request.sys_id; // Input paramter came from flow
-    grRitm.due_date = inputs.script_hiredate;
+    grRitm.due_date = inputs.script_hire_date;
     grRitm.opened_by = inputs.script_opened_by.sys_id;
     grRitm.requested_for = inputs.script_opened_by.sys_id;
 
